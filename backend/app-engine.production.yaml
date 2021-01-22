@@ -1,0 +1,39 @@
+runtime: nodejs10
+instance_class: F4_1G
+
+env_variables:
+  # MongoDB only
+  DATABASE_CONNECTION: ''
+  DATABASE_TRANSACTIONS: false
+  # END - MongoDB only
+
+  # SQL only
+  DATABASE_USERNAME: 'postgres'
+  DATABASE_DIALECT: 'postgres'
+  DATABASE_PASSWORD: '89Ertuio_4004'
+  DATABASE_DATABASE: 'postgres'
+  DATABASE_HOST: '104.198.45.150'
+  DATABASE_LOGGING: 'true'
+  # END - SQL only
+
+  DATABASE_INDIVIDUAL_CONNECTIONS_PER_REQUEST: 'false'
+  TENANT_MODE: 'multi'
+  AUTH_JWT_SECRET: '5Qmh-XN9sdlGfjNI3h1Bodw7Lpwjydt6UDI1cHkkRWK6tQedf55gyYQ45FXf5n9W'
+  AUTH_JWT_EXPIRES_IN: '7 days'
+  SENDGRID_EMAIL_FROM: 'info@edatanalytics.com'
+  SENDGRID_KEY: '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'
+  SENDGRID_TEMPLATE_EMAIL_ADDRESS_VERIFICATION: 'd-2b331bbd8bad4e609a3f454a3446098f'
+  SENDGRID_TEMPLATE_INVITATION: 'd-1424a7ecf7a94f798e459cbe6e06c58a'
+  SENDGRID_TEMPLATE_PASSWORD_RESET: 'd-e536c0bf48a14f7d9acda7a59b253c54'
+  FRONTEND_URL: 'legalpro-71a99.web.app'
+  FRONTEND_URL_WITH_SUBDOMAIN: 'http://[subdomain].localhost:<port>'
+  BACKEND_URL: 'https://legalpro-71a99-7myibb5zga-uc.a.run.app/api'
+  PLAN_STRIPE_SECRET_KEY: 'sk_test_dcAXRvQ977XNz5Bg4l7DEFAB'
+  PLAN_STRIPE_WEBHOOK_SIGNIN_SECRET: ''
+  PLAN_STRIPE_PRICES_GROWTH: 'price_1HzlJcI2aHB9NKqY4OM9VL90'
+  PLAN_STRIPE_PRICES_ENTERPRISE: 'price_1HzlSvI2aHB9NKqYROYPgCZn'
+  FILE_STORAGE_PROVIDER: 'gcp'
+  FILE_STORAGE_BUCKET: 'legalpro-71a99.appspot.com'
+  GOOGLE_CLOUD_PLATFORM_CREDENTIALS: '{ "type": "service_account", "project_id": "legalpro-71a99", "private_key_id": "6d3194a88f2e1c7b4bc5f1c45c461eccb3693025", "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC6GPhYpHUUoC0R\nePw9JTQix57AU+CFciTUvSTLnH5tK9o8NW8GmWds7TPb2+uKYNyvwuE58XlHT6XM\nTUoZxPmy+Lw9slAoGOfKJa0yp7ZFTIfLrSG3XHNBZfuc0I9Q3IfbQ4FPxuNyG2aG\nmx5Rc241prfB9dzorRBn4nMx+dI6zPXesjDvFAhoPm9XQ2DcOXxeNkAUFlg0yGXu\nGGNT1Ua3+6ZCXp9gDbt0N+1vG76rTjlKDMoudC+oZ8/TmNeGrF/IaVBGiCNhh/VR\n8a63J3SoRfXhxlh5Udnu9BhCP8CCU230iuVCa3V+eYkiXmziqpmhRd0IHTC3Woz3\nwfmzdsk9AgMBAAECggEADVLEVPRRPYzKLToQNQB43xSTlQlsRaGKaYCxJbKqin5d\nPXpF3J8W/IFu+QqhrmKI6jx1i4RyPlzBbgMKjxW/GsUcFP6zJmvCDILuB3ZiYku8\nXSSkCVChH8mBXhTAbfWb9GK8201N81lq2bA5V3OALG8nMMe9bRsW1ZksziMonfT2\n78kZIKAU29eG+r6CC8+/1KMHVtSd0dkDm1/jTQyG0IN187E3HW2SP7K1PesXJw67\nx1zXN5eYSEcD6YpfLZlgwa/AruXs6Nx2HUFsE/vG47y6yG2eMxInEY0flqFuO4mZ\njhsp/MUqlLByyfk93Qd4KJnNIPoTjjCrkL1lrI9JAQKBgQD/wK1vPpGC25V528H+\nAj/4pBDu0i6cszPoGIvDeGIHSgrLSWcy4KjxVulEYUHpjfYbE44mpUvFZ2jqvyvV\nPtcqUz9/OIyGsAC3XBIzFisqUum4m4kmEoa5LWNrD25XZVMzxLqPBqFDZXemQGPl\nfSdvtabUWdjL9pz/F2JyMXpdcQKBgQC6RwvoqT3pgmGoUYV9WcSANtNCUL+KRFEx\nbXl9wpRto/DwaBkZM9gKNXrpnr8l90RSQj79NdqCRIah1JLxshZVzw1QzQWpavXy\nkpjq20O3sznWaxmysPom4hKwDJHaw/dwG+oVoxC5Tr+RkFqQqDjlY1SEtbsW00dj\nddFSJkVyjQKBgQC9wUatID40Whm4lT2E6kRuhcRufZHKAAgGL5gbSslo4R3LIMYp\n8JhIoBRpAMQ3tnWgN00kDUZ/y68DZR3vlTVtmOCm0t0o3ZNaeDyknNEgEO6KYxRK\nJDrDUBLQj11uCKbH5TIKBoBGEhXJS0MTNV26O4vxSExbYLmxZrdLRLymcQKBgEvp\nsDy82/JRpCLINjKDZsUpkqav6Z8bgEs4Zg6OQZb8/K+8fJ38tspSSSjz/MooHru3\nK5xdWhNEgelpjAjbnqaRnseTBf+pC1ozzAXKHaq7a5KqSuq7nPZDo4IDXV1eB3S0\nq4zty175bLCRt5bEN4ukE0mSFhCTQcCSvx9PYXXxAoGBALg0VVFProu7LImISZSG\nKr6kNYEqQW660Fr1VpCgPUYQNAQKtZUm8Ql+9XJrIXIbh1wsYAVpEH6i/bieGvSw\nbCOvQ/cZ6s/pMaytsdTk9x5GD//QOlzYCDPYXCCHdLZ5GkLO246RAheib0Iy/N5y\nFNIkg5igBrLEHje/9jUEdqnN\n-----END PRIVATE KEY-----\n", "client_email": "firebase-adminsdk-e7ujm@legalpro-71a99.iam.gserviceaccount.com", "client_id": "114740973502255381888", "auth_uri": "https://accounts.google.com/o/oauth2/auth", "token_uri": "https://oauth2.googleapis.com/token", "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs", "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-e7ujm%40legalpro-71a99.iam.gserviceaccount.com" }'
+  AWS_ACCESS_KEY_ID: ''
+  AWS_SECRET_ACCESS_KEY: ''
